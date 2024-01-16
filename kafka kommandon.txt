@@ -1,0 +1,14 @@
+Öppna Terminal eller Command Prompt:
+
+Navigera till mappen där din docker-compose.yml fil finns. (cd )
+
+Kör kommandot "docker-compose up" i terminalen. Detta kommer att starta både Kafka och Zookeeper containers baserat på konfigurationen i din Docker Compose-fil.
+
+Kontrollera att Containers Körs:
+Du kan kontrollera att containers körs genom att öppna en annan terminal och köra kommandot "docker ps". Du bör se containers för både Kafka och Zookeeper som körs.
+-----------------------------------------
+docker exec -it [container_name_or_id] /bin/sh]
+
+kafka-topics.sh --create --topic [topic_name] --bootstrap-server localhost:9092 --partitions [num_partitions] --replication-factor [num_replicas]
+
+Exempel: kafka-topics.sh --create --topic my_app_topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
